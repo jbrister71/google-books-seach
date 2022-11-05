@@ -1,6 +1,7 @@
 const { User } = require('../models');
 const bookSchema = require('../models/Book');
 const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -69,3 +70,5 @@ const resolvers = {
         }
     }
 }
+
+module.exports = resolvers;
